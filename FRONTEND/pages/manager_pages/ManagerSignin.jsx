@@ -3,10 +3,12 @@ import { ToastContainer } from 'react-toastify';
 
 import { useNavigate } from 'react-router-dom';
 import { handleError, handleSuccess } from '../../components/Layout/utils';
-const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const URL = import.meta.env.VITE_API_URL ;
 
 export const ManagerSignin = () => {
     const navigate = useNavigate();
+
+    console.log(URL);
 
     const handleFormSubmit = async (FormData) =>{
         const formInputData = Object.fromEntries(FormData.entries());

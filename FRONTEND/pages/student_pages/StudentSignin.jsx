@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { handleError, handleSuccess } from '../../components/Layout/utils';
-const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const URL = import.meta.env.VITE_API_URL;
 
 export const StudentSignin = () => {
     const navigate = useNavigate();

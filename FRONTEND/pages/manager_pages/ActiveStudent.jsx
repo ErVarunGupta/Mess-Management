@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { handleError } from "../../components/Layout/utils";
-const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const URL = import.meta.env.VITE_API_URL;
 
 export const ActiveStudent = ()=>{
 
@@ -25,6 +25,7 @@ export const ActiveStudent = ()=>{
             }
 
           })
+          console.log(URL);
 
           const data = await response.json();
           const { success, message, data: studentLists } = data;

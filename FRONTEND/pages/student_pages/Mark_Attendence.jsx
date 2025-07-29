@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { handleError, handleSuccess } from "../../components/Layout/utils";
-const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const URL = import.meta.env.VITE_API_URL;
 
 export const MarkAttendance = () => {
     const [status, setStatus] = useState('');

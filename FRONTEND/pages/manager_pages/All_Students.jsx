@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { handleError, handleSuccess } from "../../components/Layout/utils";
 import { Show_Details } from "./Show_Details";
-const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const URL = import.meta.env.VITE_API_URL;
 
 export const AllStudents = () => {
 

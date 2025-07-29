@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { handleError } from "../components/Layout/utils";
-const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const URL = import.meta.env.VITE_API_URL;
 
 export const ShowMenu = () => {
     const [menu, setMenu] = useState({});

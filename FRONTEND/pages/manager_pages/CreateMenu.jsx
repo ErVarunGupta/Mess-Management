@@ -2,7 +2,7 @@ import React from 'react'
 import { handleError, handleSuccess } from '../../components/Layout/utils';
 import { ToastContainer } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+const URL = import.meta.env.VITE_API_URL;
 
 export const CreateMenu = ()=> {
   const navigate = useNavigate();
