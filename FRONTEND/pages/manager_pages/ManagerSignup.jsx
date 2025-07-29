@@ -1,6 +1,7 @@
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "../../components/Layout/utils";
 import { useNavigate } from "react-router-dom";
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 export const ManagerSignup = () => {
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ export const ManagerSignup = () => {
         console.log(formInputData);
 
         try {
-            const url = "http://localhost:8080/root/manager/manager-signup";
+            const url = `${URL}/root/manager/manager-signup`;
             const response = await fetch(url, {
                 method: "POST",
                 headers:{

@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 
 import { useNavigate } from 'react-router-dom';
 import { handleError, handleSuccess } from '../../components/Layout/utils';
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 export const ManagerSignin = () => {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ export const ManagerSignin = () => {
         console.log(formInputData);
 
         try {
-            const url = "http://localhost:8080/root/manager/manager-signin"
+            const url = `${URL}/root/manager/manager-signin`
             const response = await fetch(url, {
                 method: "POST",
                 headers: {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { handleError, handleSuccess } from "../../components/Layout/utils";
 import { Show_Details } from "./Show_Details";
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 export const AllStudents = () => {
 
@@ -22,7 +23,7 @@ export const AllStudents = () => {
             }
 
             try {
-                const url = 'http://localhost:8080/root/student/all';
+                const url = `${URL}/root/student/all`;
                 const response = await fetch(url, {
                     method: 'GET',
                     headers: {

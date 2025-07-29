@@ -2,6 +2,7 @@ import React from 'react'
 import { handleError, handleSuccess } from '../../components/Layout/utils';
 import { ToastContainer } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 export const CreateMenu = ()=> {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ export const CreateMenu = ()=> {
          return;
        }
        
-       const url = 'http://localhost:8080/root/menu/create';
+       const url = `${URL}/root/menu/create`;
        const response = await fetch(url, {
          method: 'POST',
          headers:{

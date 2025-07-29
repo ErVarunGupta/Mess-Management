@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { handleError, handleSuccess } from "../../components/Layout/utils";
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 export const MarkAttendance = () => {
     const [status, setStatus] = useState('');
@@ -20,7 +21,7 @@ export const MarkAttendance = () => {
     useEffect(() => {
         const fetchStatus = async () => {
             try {
-                const url = `http://localhost:8080/root/student/attendance/${userId}`;
+                const url = `${URL}/root/student/attendance/${userId}`;
                 const response = await fetch(url, {
                     method: 'GET',
                     headers:{
@@ -40,7 +41,7 @@ export const MarkAttendance = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         try {
-            const url = `http://localhost:8080/root/student/attendance/${userId}`;
+            const url = `${URL}/root/student/attendance/${userId}`;
             const response = await fetch(url, {
                 method: 'POST',
                 headers:{

@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { handleError, handleSuccess } from '../../components/Layout/utils';
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 export const StudentSignin = () => {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ export const StudentSignin = () => {
 
 
         try {
-            const url = "http://localhost:8080/root/student/student-signin"
+            const url = `${URL}/root/student/student-signin`
             const response = await fetch(url, {
                 method: "POST",
                 headers:{

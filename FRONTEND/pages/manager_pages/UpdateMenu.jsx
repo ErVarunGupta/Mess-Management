@@ -2,6 +2,7 @@ import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "../../components/Layout/utils";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 export const UpdateMenu = () =>{
     const [menu, setMenu] = useState();
@@ -17,7 +18,7 @@ export const UpdateMenu = () =>{
             }
 
             try {
-                const url = 'http://localhost:8080/root/menu/view';
+                const url = `${URL}/root/menu/view`;
                 const response = await fetch(url, {
                     method: 'GET',
                     headers: {
@@ -56,7 +57,7 @@ export const UpdateMenu = () =>{
         console.log(formInputData);
 
         try {
-            const url = 'http://localhost:8080/root/menu/update';
+            const url = `${URL}/root/menu/update`;
             
             const response = await fetch(url, {
                 method: 'PUT',

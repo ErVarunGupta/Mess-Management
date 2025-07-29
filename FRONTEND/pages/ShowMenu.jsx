@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { handleError } from "../components/Layout/utils";
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 export const ShowMenu = () => {
     const [menu, setMenu] = useState({});
@@ -15,7 +16,7 @@ export const ShowMenu = () => {
             }
 
             try {
-                const url = 'http://localhost:8080/root/menu/view';
+                const url = `${URL}/root/menu/view`;
                 const response = await fetch(url, {
                     method: 'GET',
                     headers: {

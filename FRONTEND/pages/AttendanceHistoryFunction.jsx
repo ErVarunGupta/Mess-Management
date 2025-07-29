@@ -1,6 +1,7 @@
  import React, { useEffect, useState } from 'react'
 import {useNavigate } from 'react-router-dom';
 import { handleError, handleSuccess } from '../components/Layout/utils';
+const URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
  
  export const AttendanceHistoryFunction = () => {
     const [history, setHistory] = useState([]);
@@ -21,7 +22,7 @@ import { handleError, handleSuccess } from '../components/Layout/utils';
     const fetchAttendance = async () => {
         setError('');
         try {
-            const url = `http://localhost:8080/root/user/${userId}`;
+            const url = `${URL}/root/user/${userId}`;
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {
