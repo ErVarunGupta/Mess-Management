@@ -1,0 +1,11 @@
+||Connect render with Github||
+git init
+touch .gitignore
+git add .
+git commit -m "Add Projects Files"
+git remote add origin https://github.com/ErVarunGupta/Virtual-Assistant.git
+git push -f -u origin main
+
+||Another deploy ||
+-> npm run build
+https://app.netlify.com/teams/ervarungupta/sites
