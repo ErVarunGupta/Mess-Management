@@ -32,6 +32,7 @@ export const ManagerSignin = () => {
                 handleSuccess(data.message);
                 setTimeout(()=>{
                     navigate('/');
+                    window.location.reload();
                 },1000)
                 
             }else{

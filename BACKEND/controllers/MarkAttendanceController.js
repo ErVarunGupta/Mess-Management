@@ -54,7 +54,7 @@ export const MarkAttendanceController = async(req, res) =>{
         });
         await student.save();
 
-        cron.schedule('0 6 * * *', async() =>{
+        cron.schedule('0 1 * * *', async() =>{
             const currDate = moment().tz("Asia/Kolkata").format('DD-MM-YYYY');
 
             try {
